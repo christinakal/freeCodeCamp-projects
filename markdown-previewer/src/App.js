@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Badge from "react-bootstrap/Badge";
+import Button from "react-bootstrap/Button";
 import marked from "marked";
 
 function App() {
@@ -25,6 +26,11 @@ function App() {
     marginLeft: "auto",
     marginRight: "auto",
     padding: "10px",
+  };
+  const clearButton = {
+    width: "100px",
+    margin: "0 auto",
+    marginTop: "6%",
   };
 
   return (
@@ -74,6 +80,13 @@ function App() {
               }}
             ></div>
           </div>
+          <Button
+            variant="light"
+            style={clearButton}
+            onClick={() => setMarkdown("")}
+          >
+            Clear
+          </Button>
         </div>
       </div>
     </div>
